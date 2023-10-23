@@ -8,8 +8,24 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'list',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'toast',
+    loadChildren: () => import('./toast/toast.module').then( m => m.ToastPageModule)
+  },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
   },
 ];
 

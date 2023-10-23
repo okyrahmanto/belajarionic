@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>toast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">toast</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button id="open-toast" expand="block">Open</ion-button>
+  <p id="message">Contoh Toast 5 Detik</p>
+  <ion-toast class="toast" position="middle" trigger="open-toast" 
+  [buttons]="toastButton"
+  message="ini contoh toast" ></ion-toast>
+</ion-content>

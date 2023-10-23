@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Video Games</ion-label>
+      <ion-button id="present-alert" >Lihat</ion-button>
+    </ion-list-header>
+    <ion-item *ngFor="let user of users">
+        <ion-label>{{user.firstName}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-alert
+  trigger="present-alert"
+  header="Alert"
+  subHeader="Important message"
+  message="This is an alert!"
+  [buttons]="alertButtons"
+  >
+  </ion-alert>
+
+</ion-content>
